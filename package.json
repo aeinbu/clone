@@ -1,0 +1,25 @@
+{
+  "name": "clone",
+  "version": "1.0.0",
+  "description": "A simple Javascript clone method",
+  "main": "clone.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeinbu/clone.git"
+  },
+  "keywords": [
+    "clone"
+  ],
+  "author": "Arjan Einbu",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/aeinbu/clone/issues"
+  },
+  "homepage": "https://github.com/aeinbu/clone#readme"
+}
