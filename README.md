@@ -1,13 +1,18 @@
 # clone.js
 A simple Javascript clone method
 
+This method will do either shallow or deep clone to any depth. (Default is deep to infinity)
+Notes:
+- It DOESN'T handle circular references, so trying to deep clone an object with circulars will just recursivly call itself. (Causing a stack overflow)
+- It will NOT copy properties that are specifically made non-enumerable
+
 ## How to use
 ### Without a module loader
 ```html
 <script src="clone.js"></script>
 <script>
   // ...
-  var copy = clone(original);
+  var copy = clone(original, depth); // depth is optional, default is infinite
   // ...
 </script>
 ```
@@ -16,7 +21,7 @@ A simple Javascript clone method
 ```javascript
 require(["clone"], function(clone){
   // ...
-  var copy = clone(original);
+  var copy = clone(original, depth); // depth is optional, default is infinite
   // ...
 });
 ```
@@ -25,6 +30,6 @@ require(["clone"], function(clone){
 ```javascript
 var clone = require("clone");
 // ...
-var copy = clone(original);
+var copy = clone(original, depth); // depth is optional, default is infinite
 // ...
 ```
