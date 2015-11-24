@@ -33,3 +33,7 @@ var clone = require("clone");
 var copy = clone(original, depth); // depth is optional, default is infinite
 // ...
 ```
+
+# Issues
+- This clone method DOES NOT handle circular references. So trying to deep clone an object with circulars will just recursivly call itself. (Causing a stack overflow)
+- Properties that are specifically made non enumerable, will NOT be copied
