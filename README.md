@@ -1,10 +1,10 @@
 # clone.js
 A simple Javascript clone method
-
 This method will do either shallow or deep clone to any depth. (Default is deep to infinity)
-Notes:
-- It DOESN'T handle circular references, so trying to deep clone an object with circulars will just recursivly call itself. (Causing a stack overflow)
-- It will NOT copy properties that are specifically made non-enumerable
+
+## Notes
+- This clone method DOES NOT handle circular references. So trying to deep clone an object with circulars will just recursivly call itself. (Causing a stack overflow)
+- Properties that are specifically made non enumerable, will NOT be copied
 
 ## How to use
 ### Without a module loader
@@ -33,7 +33,3 @@ var clone = require("clone");
 var copy = clone(original, depth); // depth is optional, default is infinite
 // ...
 ```
-
-# Issues
-- This clone method DOES NOT handle circular references. So trying to deep clone an object with circulars will just recursivly call itself. (Causing a stack overflow)
-- Properties that are specifically made non enumerable, will NOT be copied
